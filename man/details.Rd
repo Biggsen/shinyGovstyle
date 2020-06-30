@@ -19,17 +19,17 @@ This function create a detail component that you can click for further details.
 \examples{
 if (interactive()) {
   ui <- fluidPage(
-    shinyGovstyle::header(
+    shinyGovukFrontend::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::gov_layout(size = "two-thirds",
-      shinyGovstyle::details(
+      logo="shinyGovukFrontend/images/moj_logo.png"),
+    shinyGovukFrontend::gov_layout(size = "two-thirds",
+      shinyGovukFrontend::details(
         inputId = "help_div",
         label = "Help with form",
         help_text = "To complete the form you need to fill it in...")
     ),
-    shinyGovstyle::footer(full = TRUE)
+    shinyGovukFrontend::footer(full = TRUE)
   )
 
   server <- function(input, output, session) {}

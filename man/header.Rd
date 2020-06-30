@@ -30,10 +30,10 @@ This function create a header banner.  For use at top of the screen
 if (interactive()) {
 
   ui <- fluidPage(
-    shinyGovstyle::header(
+    shinyGovukFrontend::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png")
+      logo="shinyGovukFrontend/images/moj_logo.png")
   )
 
   server <- function(input, output, session) {}

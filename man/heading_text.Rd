@@ -17,14 +17,14 @@ This function create a heading text
 \examples{
 if (interactive()) {
   ui <- fluidPage(
-    shinyGovstyle::header(
+    shinyGovukFrontend::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::gov_layout(size = "two-thirds",
-      shinyGovstyle::heading_text("This is great text", "m")
+      logo="shinyGovukFrontend/images/moj_logo.png"),
+    shinyGovukFrontend::gov_layout(size = "two-thirds",
+      shinyGovukFrontend::heading_text("This is great text", "m")
     ),
-    shinyGovstyle::footer(full = TRUE)
+    shinyGovukFrontend::footer(full = TRUE)
   )
 
   server <- function(input, output, session) {}

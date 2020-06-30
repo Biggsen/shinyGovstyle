@@ -38,31 +38,31 @@ if (interactive()) {
   ui <- fluidPage(
     # Required for error handling function
     shinyjs::useShinyjs(),
-    shinyGovstyle::header(
+    shinyGovukFrontend::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::banner(inputId = "banner", type = "beta", 'This is a new service'),
-    shinyGovstyle::gov_layout(size = "two-thirds",
-      shinyGovstyle::input_field(
+      logo="shinyGovukFrontend/images/moj_logo.png"),
+    shinyGovukFrontend::banner(inputId = "banner", type = "beta", 'This is a new service'),
+    shinyGovukFrontend::gov_layout(size = "two-thirds",
+      shinyGovukFrontend::input_field(
         legend ="List of three text boxes in a field",
         labels = c("Field 1", "Field 2", "Field 3"),
         inputIds = c("field1", "field2", "field3"),
         widths = c(30,20,10),
         error = TRUE),
      # Button to trigger error
-     shinyGovstyle::button_Input(inputId = "submit", label = "Submit")
+     shinyGovukFrontend::button_Input(inputId = "submit", label = "Submit")
     ),
-    shinyGovstyle::footer(full = TRUE)
+    shinyGovukFrontend::footer(full = TRUE)
   )
 
   server <- function(input, output, session) {
     # Trigger error on blank submit of field2
     observeEvent(input$submit, {
       if (input$field2 == ""){
-        shinyGovstyle::error_on(inputId = "field2", error_message = "Please complete")
+        shinyGovukFrontend::error_on(inputId = "field2", error_message = "Please complete")
       } else {
-        shinyGovstyle::error_off(
+        shinyGovukFrontend::error_off(
           inputId = "field2")
       }
     })

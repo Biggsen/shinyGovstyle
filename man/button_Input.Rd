@@ -19,17 +19,17 @@ This function create a gov style button
 \examples{
 if (interactive()) {
   ui <- fluidPage(
-    shinyGovstyle::header(
+    shinyGovukFrontend::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::gov_layout(size = "two-thirds",
-      shinyGovstyle::button_Input(
+      logo="shinyGovukFrontend/images/moj_logo.png"),
+    shinyGovukFrontend::gov_layout(size = "two-thirds",
+      shinyGovukFrontend::button_Input(
         inputId = "btn1",
         label = "Continue",
         type = "default")
     ),
-    shinyGovstyle::footer(full = TRUE)
+    shinyGovukFrontend::footer(full = TRUE)
   )
 
   server <- function(input, output, session) {}

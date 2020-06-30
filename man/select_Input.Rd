@@ -21,11 +21,11 @@ This function inserts a select box
 \examples{
 if (interactive()) {
   ui <- fluidPage(
-    shinyGovstyle::header(
+    shinyGovukFrontend::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::gov_layout(size = "full",
+      logo="shinyGovukFrontend/images/moj_logo.png"),
+    shinyGovukFrontend::gov_layout(size = "full",
       select_Input(
         inputId = "sorter",
         label = "Sort by",
@@ -33,7 +33,7 @@ if (interactive()) {
         select_value = c("published", "updated", "view", "comments")),
         tags$br()
     ),
-    shinyGovstyle::footer(full = TRUE)
+    shinyGovukFrontend::footer(full = TRUE)
   )
 
   server <- function(input, output, session) {}
