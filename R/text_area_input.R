@@ -7,12 +7,29 @@
 #' @param row_no Size of the text entry box.  Defaults to 5.
 #' @param error Whenever to icnlud error handling  Defaults to \code{FALSE}
 #' @param error_message Message to display on error.  Defaults to \code{NULL}
-#' @param error_message Add a word limit to the display.  Defaults to \code{NULL}.
+#' @param word_limit Add a word limit to the display.  Defaults to \code{NULL}.
 #' @keywords text area
 #' @export
 #' @examples
-#' text_area_input("taId", "Can you provide more detail?",
-#' "Do not include personal or financial information, like your National Insurance number or credit card details.")
+#' if (interactive()) {
+#'   ui <- fluidPage(
+#'     shinyGovukFrontend::header(
+#'       main_text = "Example",
+#'       secondary_text = "User Examples",
+#'       logo="shinyGovukFrontend/images/moj_logo.png"),
+#'     shinyGovukFrontend::gov_layout(size = "full",
+#'       shinyGovukFrontend::text_area_input(
+#'         "taId",
+#'         "Can you provide more detail?",
+#'         "Do not include personal or financial information,
+#'         like your National Insurance number or credit card details.")
+#'     ),
+#'     shinyGovukFrontend::footer(full = TRUE)
+#'   )
+#'
+#'   server <- function(input, output, session) {}
+#'   shinyApp(ui = ui, server = server)
+#' }
 
 text_area_Input <- function(inputId, label, hint_label=NULL, row_no=5, error = FALSE, error_message = NULL, word_limit=NULL){
   govTextarea <- tags$div(class="govuk-form-group govuk-character-count", id=paste0(inputId,"div"),

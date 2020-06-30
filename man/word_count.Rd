@@ -8,13 +8,26 @@ word_count(inputId, input)
 }
 \arguments{
 \item{inputId}{The input slot of the text area that you want to affect}
+
+\item{input}{The text in the text area}
 }
 \description{
 This function create tracks the word count and should be used with the text area function
 }
 \examples{
-word_count("inputID")
+if (interactive()) {
 
+  ui <- fluidPage(
+    shinyGovukFrontend::header(
+      main_text = "Example",
+      secondary_text = "User Examples",
+      logo="shinyGovukFrontend/images/moj_logo.png")
+  )
+
+  server <- function(input, output, session) {}
+
+  shinyApp(ui = ui, server = server)
+}
 }
 \keyword{count}
 \keyword{word}

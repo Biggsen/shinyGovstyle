@@ -25,14 +25,33 @@ text_area_Input(
 
 \item{error}{Whenever to icnlud error handling  Defaults to \code{FALSE}}
 
-\item{error_message}{Add a word limit to the display.  Defaults to \code{NULL}.}
+\item{error_message}{Message to display on error.  Defaults to \code{NULL}}
+
+\item{word_limit}{Add a word limit to the display.  Defaults to \code{NULL}.}
 }
 \description{
 This function create a text area input
 }
 \examples{
-text_area_input("taId", "Can you provide more detail?",
-"Do not include personal or financial information, like your National Insurance number or credit card details.")
+if (interactive()) {
+  ui <- fluidPage(
+    shinyGovukFrontend::header(
+      main_text = "Example",
+      secondary_text = "User Examples",
+      logo="shinyGovukFrontend/images/moj_logo.png"),
+    shinyGovukFrontend::gov_layout(size = "full",
+      shinyGovukFrontend::text_area_input(
+        "taId",
+        "Can you provide more detail?",
+        "Do not include personal or financial information,
+        like your National Insurance number or credit card details.")
+    ),
+    shinyGovukFrontend::footer(full = TRUE)
+  )
+
+  server <- function(input, output, session) {}
+  shinyApp(ui = ui, server = server)
+}
 }
 \keyword{area}
 \keyword{text}

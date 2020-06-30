@@ -55,7 +55,7 @@ footer <- function(full = FALSE){
                 tags$div(class = "govuk-footer__meta-item",
                   tags$a(class = "govuk-footer__link govuk-footer__copyright-logo",
                     href = "https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/",
-                    "© Crown copyright"
+                    "&#169; Crown copyright"
                   )
 
                 ))

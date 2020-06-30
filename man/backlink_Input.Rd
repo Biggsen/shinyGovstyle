@@ -15,6 +15,22 @@ backlink_Input(inputId, link = "#")
 This function adds a back link to the page
 }
 \examples{
-back_link("backid")
+if (interactive()) {
+  ui <- fluidPage(
+    shinyGovukFrontend::header(
+      main_text = "Example",
+      secondary_text = "User Examples",
+      logo="shinyGovukFrontend/images/moj_logo.png"),
+    shinyGovukFrontend::gov_layout(size = "full",
+      shinyGovukFrontend::backlink_Input(
+        inputId = "input1",
+        link = "url")
+    ),
+    shinyGovukFrontend::footer(full = TRUE)
+  )
+
+  server <- function(input, output, session) {}
+  shinyApp(ui = ui, server = server)
+}
 }
 \keyword{backlink}
