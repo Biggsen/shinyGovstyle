@@ -4,14 +4,10 @@
 \alias{gov_layout}
 \title{Page Layout Function}
 \usage{
-gov_layout(..., inputID = "main", size = "full")
+gov_layout(...)
 }
 \arguments{
 \item{...}{include the components of the UI that you want within the main page.}
-
-\item{inputID}{ID of the main div.  Defaults to "main"}
-
-\item{size}{Layout of the page.  Optional are full, one-half, two-thrids, one-thrid and one-quarter.  Defaults to "full"}
 }
 \description{
 This function loads the page layout
@@ -23,7 +19,7 @@ if (interactive()) {
       main_text = "Example",
       secondary_text = "User Examples",
       logo="shinyGovukFrontend/images/moj_logo.png"),
-    shinyGovukFrontend::gov_layout(size = "full",
+    shinyGovukFrontend::gov_layout(
       shinyGovukFrontend::panel_output(
         inputId = "panel1",
         main_text = "Application Complete",

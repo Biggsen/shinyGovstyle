@@ -14,7 +14,7 @@ attachDependency <- function(tag, widget = NULL) {
   dep <- htmltools::htmlDependency(
     name = "stylecss", version = version,
     src = c(href="shinyGovukFrontend/css"),
-    stylesheet = "govuk-frontend-norem.css"
+    stylesheet = "custom.css"
   )
 
   if (!is.null(widget)) {
