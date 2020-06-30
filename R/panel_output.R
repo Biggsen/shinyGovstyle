@@ -9,17 +9,17 @@
 #' @examples
 #' if (interactive()) {
 #'   ui <- fluidPage(
-#'     shinyGovstyle::header(
+#'     shinyGovukFrontend::header(
 #'       main_text = "Example",
 #'       secondary_text = "User Examples",
-#'       logo="shinyGovstyle/images/moj_logo.png"),
-#'     shinyGovstyle::gov_layout(size = "full",
-#'       shinyGovstyle::panel_output(
+#'       logo="shinyGovukFrontend/images/moj_logo.png"),
+#'     shinyGovukFrontend::gov_layout(size = "full",
+#'       shinyGovukFrontend::panel_output(
 #'         inputId = "panel1",
 #'         main_text = "Application Complete",
 #'         sub_text = "Thank you for submitting your application.  Your reference is xvsiq")
 #'     ),
-#'     shinyGovstyle::footer(full = TRUE)
+#'     shinyGovukFrontend::footer(full = TRUE)
 #'   )
 #'
 #'   server <- function(input, output, session) {}

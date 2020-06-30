@@ -19,32 +19,32 @@
 #'   ui <- fluidPage(
 #'     # Required for error handling function
 #'     shinyjs::useShinyjs(),
-#'     shinyGovstyle::header(
+#'     shinyGovukFrontend::header(
 #'       main_text = "Example",
 #'       secondary_text = "User Examples",
-#'       logo="shinyGovstyle/images/moj_logo.png"),
-#'     shinyGovstyle::banner(inputId = "banner", type = "beta", 'This is a new service'),
-#'     shinyGovstyle::gov_layout(size = "two-thirds",
+#'       logo="shinyGovukFrontend/images/moj_logo.png"),
+#'     shinyGovukFrontend::banner(inputId = "banner", type = "beta", 'This is a new service'),
+#'     shinyGovukFrontend::gov_layout(size = "two-thirds",
 #'       # Simple file input
-#'       shinyGovstyle::file_Input(inputId = "file1", label = "Upload a file"),
+#'       shinyGovukFrontend::file_Input(inputId = "file1", label = "Upload a file"),
 #'       # Error file
-#'       shinyGovstyle::file_Input(
+#'       shinyGovukFrontend::file_Input(
 #'         inputId = "file2",
 #'         label = "Upload a file",
 #'         error = TRUE),
 #'       # Button to trigger error
-#'       shinyGovstyle::button_Input(inputId = "submit", label = "Submit")
+#'       shinyGovukFrontend::button_Input(inputId = "submit", label = "Submit")
 #'     ),
-#'     shinyGovstyle::footer(full = TRUE)
+#'     shinyGovukFrontend::footer(full = TRUE)
 #'   )
 #'
 #'   server <- function(input, output, session) {
 #'     #'Trigger error on blank submit of file2
 #'     observeEvent(input$submit, {
 #'       if (is.null(input$file2)){
-#'         shinyGovstyle::error_on(inputId = "file2")
+#'         shinyGovukFrontend::error_on(inputId = "file2")
 #'       } else {
-#'         shinyGovstyle::error_off(
+#'         shinyGovukFrontend::error_off(
 #'           inputId = "file2")
 #'       }
 #'     })

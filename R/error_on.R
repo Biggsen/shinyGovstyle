@@ -12,21 +12,21 @@
 #'   ui <- fluidPage(
 #'     # Required for error handling function
 #'     shinyjs::useShinyjs(),
-#'     shinyGovstyle::header(
+#'     shinyGovukFrontend::header(
 #'       main_text = "Example",
 #'       secondary_text = "User Examples",
-#'       logo="shinyGovstyle/images/moj_logo.png"),
-#'     shinyGovstyle::banner(inputId = "banner", type = "beta", 'This is a new service'),
-#'     shinyGovstyle::gov_layout(size = "two-thirds",
+#'       logo="shinyGovukFrontend/images/moj_logo.png"),
+#'     shinyGovukFrontend::banner(inputId = "banner", type = "beta", 'This is a new service'),
+#'     shinyGovukFrontend::gov_layout(size = "two-thirds",
 #'       # Error text box
-#'       shinyGovstyle::text_Input(
+#'       shinyGovukFrontend::text_Input(
 #'         inputId = "eventId",
 #'         label = "Event Name",
 #'         error = TRUE),
 #'       # Button to trigger error
-#'       shinyGovstyle::button_Input(inputId = "submit", label = "Submit")
+#'       shinyGovukFrontend::button_Input(inputId = "submit", label = "Submit")
 #'     ),
-#'     shinyGovstyle::footer(full = TRUE)
+#'     shinyGovukFrontend::footer(full = TRUE)
 #'   )
 #'
 #'
@@ -34,9 +34,9 @@
 #'     #Trigger error on blank submit of eventId2
 #'     observeEvent(input$submit, {
 #'       if (input$eventId != ""){
-#'         shinyGovstyle::error_off(inputId = "eventId")
+#'         shinyGovukFrontend::error_off(inputId = "eventId")
 #'       } else {
-#'         shinyGovstyle::error_on(
+#'         shinyGovukFrontend::error_on(
 #'           inputId = "eventId",
 #'           error_message = "Please complete")
 #'       }

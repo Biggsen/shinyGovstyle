@@ -10,11 +10,11 @@
 #' if (interactive()) {
 #'
 #'   ui <- fluidPage(
-#'     shinyGovstyle::header(
+#'     shinyGovukFrontend::header(
 #'       main_text = "Example",
 #'       secondary_text = "User Examples",
-#'       logo="shinyGovstyle/images/moj_logo.png"),
-#'     shinyGovstyle::banner(inputId = "banner", type = "beta", 'This is a new service')
+#'       logo="shinyGovukFrontend/images/moj_logo.png"),
+#'     shinyGovukFrontend::banner(inputId = "banner", type = "beta", 'This is a new service')
 #'   )
 #'
 #'   server <- function(input, output, session) {}

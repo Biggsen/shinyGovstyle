@@ -1,4 +1,4 @@
-#' Attach shinyGovstyle dependancies
+#' Attach shinyGovukFrontend dependancies
 #'
 #' @param tag An object which has (or should have) HTML dependencies.
 #' @param widget Name of a widget for particular dependancies
@@ -9,11 +9,11 @@
 
 attachDependency <- function(tag, widget = NULL) {
 
-  version <- as.character(packageVersion("shinyGovstyle")[[1]])
+  version <- as.character(packageVersion("shinyGovukFrontend")[[1]])
 
   dep <- htmltools::htmlDependency(
     name = "stylecss", version = version,
-    src = c(href="shinyGovstyle/css"),
+    src = c(href="shinyGovukFrontend/css"),
     stylesheet = "govuk-frontend-norem.css"
   )
 
@@ -24,7 +24,7 @@ attachDependency <- function(tag, widget = NULL) {
         htmltools::htmlDependency(
           name = "radio_button_Input",
           version = version,
-          src = c(href="shinyGovstyle/js"),
+          src = c(href="shinyGovukFrontend/js"),
           script = "radio_button_input_binding.js"
         )
       )
@@ -35,7 +35,7 @@ attachDependency <- function(tag, widget = NULL) {
           htmltools::htmlDependency(
             name = "date_Input",
             version = version,
-            src = c(href="shinyGovstyle/js"),
+            src = c(href="shinyGovukFrontend/js"),
             script = "date_input_binding.js"
           )
         )

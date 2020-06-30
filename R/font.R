@@ -8,10 +8,10 @@
 #'
 #'   ui <- fluidPage(
 #'     font(),
-#'     shinyGovstyle::header(
+#'     shinyGovukFrontend::header(
 #'       main_text = "Example",
 #'       secondary_text = "User Examples",
-#'       logo="shinyGovstyle/images/moj_logo.png")
+#'       logo="shinyGovukFrontend/images/moj_logo.png")
 #'   )
 #'
 #'   server <- function(input, output, session) {}
@@ -20,11 +20,11 @@
 #' }
 
 font <- function(){
-  version <- as.character(packageVersion("shinyGovstyle")[[1]])
+  version <- as.character(packageVersion("shinyGovukFrontend")[[1]])
 
   htmltools::htmlDependency(
     name = "font", version = version,
-    src = c(href="shinyGovstyle/css"),
+    src = c(href="shinyGovukFrontend/css"),
     stylesheet = "font.css"
   )
 }
