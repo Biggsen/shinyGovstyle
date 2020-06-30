@@ -29,7 +29,7 @@ header <- function(main_text, secondary_text, logo = NULL, main_link = "#", seco
       tags$div(class = "govuk-header__logo",
         tags$a(href = main_link, class="govuk-header__link govuk-header__link--homepage",
           tags$span(class = "govuk-header__logotype",
-            tags$img(src = logo, class = "govuk-header__logotype-crown-fallback-image"),
+            tags$img(src = logo, class = "govuk-header__logotype-crown-fallback-image", alt = ""),
             tags$span(main_text, class = "govuk-header__logotype-text")
           )
         )
